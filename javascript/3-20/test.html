@@ -1,0 +1,19 @@
+<script>
+function setMe(){
+  timer = window.setInterval(count_down, 100);
+}
+i = 5;
+function count_down(){
+  document.getElementById("time_now").innerHTML = i
+  i = i - 0.1;
+  if(i < 0){
+    window.clearInterval(timer);
+    i = 0;
+    document.getElementById("time_now").innerHTML = i
+    i = 5;
+  }
+};
+</script>
+<p id="time_now">
+</p>
+<button onclick="setMe()"> click </button>
